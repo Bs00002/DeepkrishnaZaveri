@@ -1,0 +1,13 @@
+.vimotia_gallery_wrapper {
+	display: flex;
+}
+
+.vimotia_gallery_item {
+	flex: 1;
+	height: 100%;
+	background-image: url("../images/gallery_video_ph.png");
+	background-size:cover;
+	background-position: center;
+	aspect-ratio:9/16;
+	margin: 36px 6px;
+}

@@ -1,0 +1,2073 @@
+/* ==========================================================================
+   DEEPKRISHNA ZAVERI - SINCE 1952
+   Royal Indian Heritage & Luxury Bridal Jewellery
+   Visual Identity: Deep Maroon Velvet, Antique Gold, Warm Ivory, Deep Wine
+   ========================================================================== */
+
+:root {
+  /* Royal Color Palette */
+  --color-maroon-deep: #3B030D;
+  --color-maroon-rich: #4A0410;
+  --color-maroon-royal: #5C0816;
+  --color-maroon-bright: #7A0C1F;
+  --color-wine-dark: #200206;
+  --color-wine-darker: #130104;
+  --color-wine-black: #0B0002;
+
+  /* Antique Gold Accents */
+  --color-gold-light: #F7E5A9;
+  --color-gold-antique: #D4AF37;
+  --color-gold-rich: #C59D3F;
+  --color-gold-dark: #9A7527;
+  --color-gold-muted: #8E7036;
+
+  /* Warm Ivory & Creams */
+  --color-cream-pure: #FAF6F0;
+  --color-cream-warm: #F4ECE1;
+  --color-cream-muted: #D9CBB8;
+  --color-cream-trans: rgba(250, 246, 240, 0.88);
+
+  /* Gold Gradients */
+  --gradient-gold: linear-gradient(135deg, #FBF0B9 0%, #D4AF37 40%, #AA822A 75%, #DFBA58 100%);
+  --gradient-gold-subtle: linear-gradient(135deg, rgba(247, 229, 169, 0.2) 0%, rgba(212, 175, 55, 0.4) 100%);
+  --gradient-maroon: radial-gradient(circle at center, #630818 0%, #3B030D 60%, #150104 100%);
+  --gradient-hero: radial-gradient(ellipse 90% 70% at 50% 30%, #680A1A 0%, #3B030D 45%, #150104 90%);
+  --gradient-card: linear-gradient(180deg, rgba(74, 4, 16, 0.7) 0%, rgba(32, 2, 6, 0.95) 100%);
+  --gradient-velvet: linear-gradient(135deg, #4A0410 0%, #32030B 50%, #1F0206 100%);
+
+  /* Typography */
+  --font-serif-royal: 'Cinzel', 'Playfair Display', Georgia, serif;
+  --font-serif-elegant: 'Cormorant Garamond', Garamond, 'Times New Roman', serif;
+  --font-sans: 'Montserrat', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Shadows & Glows */
+  --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.15);
+  --shadow-gold-bright: 0 0 25px rgba(212, 175, 55, 0.35);
+  --shadow-maroon: 0 20px 40px rgba(11, 0, 2, 0.8);
+  --border-gold-subtle: 1px solid rgba(212, 175, 55, 0.25);
+  --border-gold-radiant: 1px solid rgba(212, 175, 55, 0.55);
+
+  /* Transitions */
+  --transition-smooth: all 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-slow: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset & Base Setup */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--color-wine-black);
+  color: var(--color-cream-pure);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-wine-darker);
+  color: var(--color-cream-warm);
+  line-height: 1.7;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle Indian Royal Jaali Pattern Overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.035;
+  background-image: radial-gradient(var(--color-gold-antique) 1px, transparent 1px), radial-gradient(var(--color-gold-light) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Typography Utilities */
+.font-cinzel {
+  font-family: var(--font-serif-royal);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.font-cormorant {
+  font-family: var(--font-serif-elegant);
+  letter-spacing: 0.03em;
+}
+
+.text-gold {
+  color: var(--color-gold-antique);
+}
+
+.text-gold-gradient {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.text-cream-muted {
+  color: var(--color-cream-muted);
+}
+
+/* Gold Motif Divider */
+.gold-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 18px auto;
+  width: 100%;
+  max-width: 280px;
+}
+
+.gold-divider::before,
+.gold-divider::after {
+  content: '';
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, var(--color-gold-antique), transparent);
+}
+
+.gold-divider-icon {
+  color: var(--color-gold-antique);
+  font-size: 0.85rem;
+  transform: rotate(45deg);
+  width: 9px;
+  height: 9px;
+  border: 1px solid var(--color-gold-antique);
+}
+
+/* ==========================================================================
+   TOP ANNOUNCEMENT BAR
+   ========================================================================== */
+.announcement-bar {
+  background: var(--color-wine-black);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-gold-light);
+  padding: 8px 24px;
+  text-align: center;
+  position: relative;
+  z-index: 1001;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.announcement-left, .announcement-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.announcement-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-cream-muted);
+}
+
+.announcement-item i {
+  color: var(--color-gold-antique);
+}
+
+.announcement-item a:hover {
+  color: var(--color-gold-light);
+}
+
+.announcement-center {
+  font-family: var(--font-serif-royal);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+}
+
+@media (max-width: 900px) {
+  .announcement-left, .announcement-right {
+    display: none;
+  }
+  .announcement-bar {
+    justify-content: center;
+    font-size: 0.72rem;
+  }
+}
+
+/* ==========================================================================
+   MAIN NAVIGATION HEADER (STICKY LUXURY)
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(32, 2, 6, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  transition: var(--transition-smooth);
+}
+
+.site-header.scrolled {
+  background: rgba(19, 1, 4, 0.96);
+  border-bottom-color: rgba(212, 175, 55, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.nav-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 12px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Brand Logo Styling */
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.header-brand-logo {
+  height: 58px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+  transition: var(--transition-smooth);
+}
+
+.site-header.scrolled .header-brand-logo {
+  height: 50px;
+}
+
+.brand-text-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-family: var(--font-serif-royal);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--color-gold-light);
+  line-height: 1.15;
+}
+
+.brand-subtitle {
+  font-size: 0.68rem;
+  font-family: var(--font-serif-royal);
+  letter-spacing: 0.35em;
+  color: var(--color-gold-antique);
+  text-transform: uppercase;
+}
+
+/* Desktop Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-cream-warm);
+  position: relative;
+  padding: 8px 0;
+  transition: var(--transition-smooth);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 1.5px;
+  background: var(--gradient-gold);
+  transition: var(--transition-smooth);
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--color-gold-light);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+  width: 100%;
+}
+
+/* Nav Actions */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-showroom-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 9px 18px;
+  border: 1px solid var(--color-gold-antique);
+  color: var(--color-gold-light);
+  border-radius: 2px;
+  background: rgba(212, 175, 55, 0.08);
+  transition: var(--transition-smooth);
+}
+
+.btn-showroom-call:hover {
+  background: var(--gradient-gold);
+  color: var(--color-wine-darker);
+  border-color: transparent;
+  box-shadow: var(--shadow-gold);
+}
+
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 28px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1010;
+}
+
+.nav-hamburger span {
+  width: 100%;
+  height: 2px;
+  background: var(--color-gold-light);
+  border-radius: 2px;
+  transition: var(--transition-smooth);
+}
+
+/* Mobile Nav Drawer */
+.mobile-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 0, 2, 0.8);
+  backdrop-filter: blur(6px);
+  z-index: 1008;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-smooth);
+}
+
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 86%;
+  max-width: 420px;
+  height: 100%;
+  background: var(--gradient-velvet);
+  border-left: 1px solid rgba(212, 175, 55, 0.35);
+  z-index: 1009;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  transition: var(--transition-slow);
+  box-shadow: -15px 0 35px rgba(0,0,0,0.8);
+}
+
+.mobile-nav-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-drawer.open {
+  right: 0;
+}
+
+.mobile-nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.mobile-nav-close {
+  color: var(--color-gold-light);
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.mobile-nav-links {
+  list-style: none;
+  margin: 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-nav-links a {
+  font-family: var(--font-serif-royal);
+  font-size: 1.1rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-cream-warm);
+  display: block;
+}
+
+.mobile-nav-links a:hover {
+  color: var(--color-gold-light);
+  padding-left: 8px;
+}
+
+.mobile-nav-contact {
+  padding-top: 24px;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  font-size: 0.85rem;
+  color: var(--color-cream-muted);
+}
+
+@media (max-width: 1080px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-hamburger {
+    display: flex;
+  }
+  .btn-showroom-call span {
+    display: none;
+  }
+  .btn-showroom-call {
+    padding: 8px 12px;
+  }
+}
+
+/* ==========================================================================
+   HERO SECTION - CINEMATIC ROYAL GRANDEUR
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  min-height: 94vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-hero);
+  overflow: hidden;
+  padding: 80px 24px 60px;
+}
+
+/* Regal Decorative Arch Background */
+.hero-arch-frame {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 88%;
+  max-width: 1200px;
+  height: 88%;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 400px 400px 0 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-arch-frame::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 1px dashed rgba(212, 175, 55, 0.1);
+  border-radius: 390px 390px 0 0;
+}
+
+/* Floating Gold Particle Effect */
+.particles-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 10;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-content {
+  text-align: left;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.hero-crest {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.hero-emblem-badge {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-emblem-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero-crest-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-brand-name {
+  font-family: var(--font-serif-royal);
+  font-size: 1.4rem;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  color: var(--color-gold-light);
+  text-transform: uppercase;
+}
+
+.hero-legacy-tag {
+  font-family: var(--font-serif-royal);
+  font-size: 0.78rem;
+  letter-spacing: 0.42em;
+  color: var(--color-gold-antique);
+  text-transform: uppercase;
+}
+
+.hero-headline {
+  font-family: var(--font-serif-elegant);
+  font-size: 3.8rem;
+  line-height: 1.12;
+  font-weight: 400;
+  color: var(--color-cream-pure);
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+
+.hero-headline em {
+  font-style: italic;
+  color: var(--color-gold-light);
+  font-family: var(--font-serif-royal);
+}
+
+.hero-subtext {
+  font-size: 1.1rem;
+  color: var(--color-cream-muted);
+  line-height: 1.8;
+  max-width: 540px;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Luxury Royal Buttons */
+.btn-royal-gold {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 36px;
+  background: var(--gradient-gold);
+  color: var(--color-wine-black);
+  font-family: var(--font-serif-royal);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.25);
+  transition: var(--transition-smooth);
+}
+
+.btn-royal-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(212, 175, 55, 0.4);
+  filter: brightness(1.08);
+}
+
+.btn-royal-outline {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 34px;
+  background: rgba(74, 4, 16, 0.4);
+  color: var(--color-gold-light);
+  border: 1px solid var(--color-gold-antique);
+  font-family: var(--font-serif-royal);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  backdrop-filter: blur(6px);
+  transition: var(--transition-smooth);
+}
+
+.btn-royal-outline:hover {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: var(--color-gold-light);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Hero Showcase Visual */
+.hero-visual {
+  position: relative;
+}
+
+.hero-image-frame {
+  position: relative;
+  border-radius: 260px 260px 8px 8px;
+  overflow: hidden;
+  border: 2px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(212, 175, 55, 0.15);
+  background: var(--color-maroon-deep);
+  aspect-ratio: 4 / 5;
+}
+
+.hero-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-visual:hover .hero-image-frame img {
+  transform: scale(1.08);
+}
+
+.hero-badge-overlay {
+  position: absolute;
+  bottom: 24px;
+  left: -20px;
+  background: rgba(32, 2, 6, 0.94);
+  border: 1px solid var(--color-gold-antique);
+  padding: 16px 22px;
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 12;
+}
+
+.hero-badge-overlay .badge-num {
+  font-family: var(--font-serif-royal);
+  font-size: 1.8rem;
+  color: var(--color-gold-antique);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.hero-badge-overlay .badge-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-cream-warm);
+  line-height: 1.35;
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 48px;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-crest {
+    justify-content: center;
+  }
+  .hero-subtext {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .hero-headline {
+    font-size: 2.8rem;
+  }
+  .hero-image-frame {
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  .hero-badge-overlay {
+    left: 10px;
+  }
+}
+
+/* ==========================================================================
+   SECTION COMMON STYLING
+   ========================================================================== */
+.section-wrapper {
+  padding: 110px 24px;
+  position: relative;
+  z-index: 5;
+}
+
+.section-maroon-deep {
+  background: var(--color-maroon-deep);
+  background: radial-gradient(circle at center 20%, #46040F 0%, #290208 80%, #150104 100%);
+}
+
+.section-wine-dark {
+  background: var(--color-wine-dark);
+  background: linear-gradient(180deg, #1C0105 0%, #2A030A 50%, #140104 100%);
+}
+
+.section-velvet {
+  background: var(--gradient-velvet);
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 60px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-family: var(--font-serif-royal);
+  font-size: 0.76rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-gold-antique);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: var(--font-serif-elegant);
+  font-size: 2.85rem;
+  font-weight: 400;
+  color: var(--color-cream-pure);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.section-desc {
+  font-size: 1.02rem;
+  color: var(--color-cream-muted);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* ==========================================================================
+   HERITAGE SECTION (A LEGACY SINCE 1952)
+   Verified positioning only - No invented history
+   ========================================================================== */
+.heritage-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.heritage-visual {
+  position: relative;
+}
+
+.heritage-arch-image {
+  position: relative;
+  border-radius: 240px 240px 4px 4px;
+  overflow: hidden;
+  border: 1px solid var(--color-gold-antique);
+  padding: 10px;
+  background: rgba(74, 4, 16, 0.5);
+  box-shadow: var(--shadow-maroon);
+}
+
+.heritage-arch-image img {
+  border-radius: 230px 230px 4px 4px;
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+
+.heritage-gold-seal {
+  position: absolute;
+  top: 30px;
+  right: -25px;
+  width: 110px;
+  height: 110px;
+  background: var(--gradient-gold);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-wine-darker);
+  font-family: var(--font-serif-royal);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+  border: 3px solid var(--color-cream-pure);
+  text-align: center;
+}
+
+.heritage-gold-seal .seal-year {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.heritage-gold-seal .seal-sub {
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.heritage-content {
+  text-align: left;
+}
+
+.heritage-headline {
+  font-family: var(--font-serif-elegant);
+  font-size: 2.6rem;
+  color: var(--color-cream-pure);
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+
+.heritage-quote {
+  font-family: var(--font-serif-elegant);
+  font-size: 1.32rem;
+  font-style: italic;
+  color: var(--color-gold-light);
+  line-height: 1.65;
+  padding-left: 20px;
+  border-left: 2px solid var(--color-gold-antique);
+  margin-bottom: 28px;
+}
+
+.heritage-text {
+  font-size: 1rem;
+  color: var(--color-cream-muted);
+  line-height: 1.85;
+  margin-bottom: 36px;
+}
+
+.heritage-pillars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.heritage-pillar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.pillar-icon {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--color-gold-antique);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold-light);
+  font-size: 1rem;
+  background: rgba(212, 175, 55, 0.08);
+  flex-shrink: 0;
+}
+
+.pillar-info h4 {
+  font-family: var(--font-serif-royal);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: var(--color-gold-light);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.pillar-info p {
+  font-size: 0.82rem;
+  color: var(--color-cream-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .heritage-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .heritage-arch-image img {
+    height: 400px;
+  }
+  .heritage-gold-seal {
+    right: 10px;
+  }
+}
+
+/* ==========================================================================
+   COLLECTIONS SECTION
+   Main categories: BRIDAL, FINE JEWELLERY, TRADITIONAL, BESPOKE
+   ========================================================================== */
+.collections-grid {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.collection-card {
+  position: relative;
+  background: var(--gradient-card);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+}
+
+.collection-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-gold-antique);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.15);
+}
+
+.collection-card-img-wrap {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+  background: var(--color-maroon-deep);
+}
+
+.collection-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.collection-card:hover .collection-card-img-wrap img {
+  transform: scale(1.08);
+}
+
+.collection-card-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(32, 2, 6, 0.88);
+  border: 1px solid var(--color-gold-antique);
+  color: var(--color-gold-light);
+  font-family: var(--font-serif-royal);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 2px;
+}
+
+.collection-card-body {
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.collection-card-title {
+  font-family: var(--font-serif-royal);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--color-gold-light);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.collection-card-desc {
+  font-size: 0.86rem;
+  color: var(--color-cream-muted);
+  line-height: 1.6;
+  margin-bottom: 22px;
+  flex-grow: 1;
+}
+
+.btn-card-explore {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-serif-royal);
+  font-size: 0.74rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold-antique);
+  padding: 10px 18px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 2px;
+  transition: var(--transition-smooth);
+}
+
+.collection-card:hover .btn-card-explore {
+  background: var(--gradient-gold);
+  color: var(--color-wine-darker);
+  border-color: transparent;
+}
+
+@media (max-width: 1100px) {
+  .collections-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .collections-grid {
+    grid-template-columns: 1fr;
+  }
+  .collection-card-img-wrap {
+    height: 320px;
+  }
+}
+
+/* ==========================================================================
+   THE BRIDAL EDIT SECTION (HORIZONTAL SCROLLING / CAROUSEL)
+   Cinematic showcase using actual Deep Krishna bridal assets
+   ========================================================================== */
+.bridal-edit-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  max-width: 1360px;
+  margin: 0 auto 40px;
+  padding: 0 12px;
+}
+
+.bridal-nav-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.bridal-nav-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--color-gold-antique);
+  background: rgba(74, 4, 16, 0.4);
+  color: var(--color-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: var(--transition-smooth);
+}
+
+.bridal-nav-btn:hover {
+  background: var(--gradient-gold);
+  color: var(--color-wine-black);
+  box-shadow: var(--shadow-gold);
+}
+
+/* Horizontal Track */
+.bridal-carousel-container {
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 20px 24px;
+}
+
+.bridal-carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.bridal-track {
+  display: flex;
+  gap: 28px;
+  width: max-content;
+}
+
+.bridal-look-card {
+  width: 330px;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--gradient-card);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.bridal-look-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-gold-light);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 25px rgba(212, 175, 55, 0.2);
+}
+
+.bridal-card-media {
+  position: relative;
+  height: 440px;
+  overflow: hidden;
+}
+
+.bridal-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bridal-look-card:hover .bridal-card-media img {
+  transform: scale(1.08);
+}
+
+.bridal-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(19, 1, 4, 0.95) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px 20px;
+}
+
+.bridal-look-tag {
+  font-family: var(--font-serif-royal);
+  font-size: 0.68rem;
+  letter-spacing: 0.3em;
+  color: var(--color-gold-antique);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.bridal-look-name {
+  font-family: var(--font-serif-elegant);
+  font-size: 1.4rem;
+  color: var(--color-cream-pure);
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.bridal-look-desc {
+  font-size: 0.8rem;
+  color: var(--color-cream-muted);
+  line-height: 1.5;
+}
+
+.bridal-cta-bar {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* ==========================================================================
+   BESPOKE JEWELLERY SECTION
+   "Created Around Your Story"
+   ========================================================================== */
+.bespoke-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.bespoke-imagery-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 20px;
+  position: relative;
+}
+
+.bespoke-img-col1, .bespoke-img-col2 {
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: var(--shadow-maroon);
+}
+
+.bespoke-img-col1 img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+}
+
+.bespoke-img-col2 {
+  margin-top: 40px;
+}
+
+.bespoke-img-col2 img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+}
+
+.bespoke-content {
+  text-align: left;
+}
+
+.bespoke-headline {
+  font-family: var(--font-serif-elegant);
+  font-size: 3rem;
+  color: var(--color-cream-pure);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.bespoke-desc {
+  font-size: 1.05rem;
+  color: var(--color-cream-muted);
+  line-height: 1.85;
+  margin-bottom: 36px;
+  font-weight: 300;
+}
+
+.bespoke-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.bespoke-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.step-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--color-gold-antique);
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--color-gold-light);
+  font-family: var(--font-serif-royal);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step-details h4 {
+  font-family: var(--font-serif-royal);
+  font-size: 0.92rem;
+  letter-spacing: 0.14em;
+  color: var(--color-gold-light);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.step-details p {
+  font-size: 0.85rem;
+  color: var(--color-cream-muted);
+  line-height: 1.55;
+}
+
+@media (max-width: 992px) {
+  .bespoke-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .bespoke-imagery-grid {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+}
+
+/* ==========================================================================
+   JEWELLERY GALLERY (EDITORIAL ANIMATED GALLERY)
+   Using actual Deep Krishna Zaveri assets
+   ========================================================================== */
+.gallery-filter-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.gallery-tab {
+  font-family: var(--font-serif-royal);
+  font-size: 0.76rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 9px 22px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  background: rgba(32, 2, 6, 0.6);
+  color: var(--color-cream-warm);
+  border-radius: 2px;
+  transition: var(--transition-smooth);
+}
+
+.gallery-tab:hover, .gallery-tab.active {
+  background: var(--gradient-gold);
+  color: var(--color-wine-black);
+  border-color: transparent;
+  box-shadow: var(--shadow-gold);
+}
+
+.gallery-grid {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  background: var(--color-maroon-deep);
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.gallery-item.span-2 {
+  grid-column: span 2;
+  aspect-ratio: 2 / 1;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-item-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 2, 6, 0.78);
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition-smooth);
+  padding: 24px;
+  text-align: center;
+}
+
+.gallery-item:hover .gallery-item-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--color-gold-antique);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold-light);
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.gallery-overlay-title {
+  font-family: var(--font-serif-royal);
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+  color: var(--color-gold-light);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.gallery-overlay-cat {
+  font-size: 0.78rem;
+  color: var(--color-cream-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 860px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery-item.span-2 {
+    grid-column: span 1;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (max-width: 540px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   SHOWROOM & VERIFIED REVIEWS SECTION
+   Verified information only: Synergy Space, 7, Near D-Mart, Sargasan, Gandhinagar
+   ========================================================================== */
+.showroom-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.showroom-card {
+  background: var(--gradient-card);
+  border: 1px solid var(--color-gold-antique);
+  border-radius: 4px;
+  padding: 44px 40px;
+  box-shadow: var(--shadow-maroon);
+  position: relative;
+}
+
+.showroom-card::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px dashed rgba(212, 175, 55, 0.25);
+  pointer-events: none;
+  border-radius: 2px;
+}
+
+.showroom-brand-header {
+  margin-bottom: 30px;
+}
+
+.showroom-brand-name {
+  font-family: var(--font-serif-royal);
+  font-size: 1.6rem;
+  letter-spacing: 0.2em;
+  color: var(--color-gold-light);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.showroom-legacy {
+  font-family: var(--font-serif-royal);
+  font-size: 0.76rem;
+  letter-spacing: 0.35em;
+  color: var(--color-gold-antique);
+  text-transform: uppercase;
+}
+
+.showroom-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-bottom: 36px;
+}
+
+.showroom-detail-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.detail-icon {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--color-gold-antique);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold-light);
+  font-size: 1.1rem;
+  background: rgba(212, 175, 55, 0.1);
+  flex-shrink: 0;
+}
+
+.detail-text h5 {
+  font-family: var(--font-serif-royal);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  color: var(--color-gold-antique);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.detail-text p, .detail-text a {
+  font-size: 0.95rem;
+  color: var(--color-cream-pure);
+  line-height: 1.5;
+}
+
+.showroom-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+/* WhatsApp Demo Placeholder */
+.whatsapp-placeholder-box {
+  background: rgba(26, 2, 6, 0.7);
+  border: 1px dashed rgba(212, 175, 55, 0.3);
+  padding: 14px 18px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.whatsapp-placeholder-icon {
+  color: #25D366;
+  font-size: 1.4rem;
+}
+
+.whatsapp-placeholder-text {
+  font-size: 0.8rem;
+  color: var(--color-cream-muted);
+}
+
+.whatsapp-placeholder-text strong {
+  display: block;
+  font-family: var(--font-serif-royal);
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  color: var(--color-gold-light);
+  text-transform: uppercase;
+}
+
+/* Google Reviews Verified Card */
+.reviews-verified-card {
+  background: var(--gradient-velvet);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 4px;
+  padding: 36px 32px;
+  text-align: center;
+  box-shadow: var(--shadow-maroon);
+}
+
+.reviews-badge-google {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-cream-warm);
+  margin-bottom: 16px;
+}
+
+.google-g-icon {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #4285F4;
+}
+
+.reviews-score {
+  font-family: var(--font-serif-royal);
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: var(--color-gold-light);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.reviews-stars {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  color: #FFB800;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.reviews-count-label {
+  font-size: 1rem;
+  color: var(--color-cream-pure);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.reviews-disclaimer {
+  font-size: 0.78rem;
+  color: var(--color-cream-muted);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 992px) {
+  .showroom-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* ==========================================================================
+   INSTAGRAM SECTION (@deepkrishnazaveri)
+   "FOLLOW OUR JOURNEY"
+   ========================================================================== */
+.instagram-grid {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.insta-tile {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  display: block;
+}
+
+.insta-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.insta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(32, 2, 6, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold-light);
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.insta-tile:hover img {
+  transform: scale(1.1);
+}
+
+.insta-tile:hover .insta-overlay {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .instagram-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .instagram-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
+   CONTACT & PRIVATE CONSULTATION MODAL / SECTION
+   ========================================================================== */
+.contact-section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--gradient-card);
+  border: 1px solid var(--color-gold-antique);
+  border-radius: 4px;
+  padding: 50px;
+  box-shadow: var(--shadow-maroon);
+}
+
+.consultation-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.form-full {
+  grid-column: span 2;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-family: var(--font-serif-royal);
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  color: var(--color-gold-antique);
+  text-transform: uppercase;
+}
+
+.form-control {
+  background: rgba(19, 1, 4, 0.7);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--color-cream-pure);
+  padding: 13px 16px;
+  border-radius: 2px;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  outline: none;
+  transition: var(--transition-smooth);
+}
+
+.form-control:focus {
+  border-color: var(--color-gold-light);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.25);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-notice {
+  font-size: 0.8rem;
+  color: var(--color-cream-muted);
+  margin-top: 14px;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .contact-section-inner {
+    padding: 30px 20px;
+  }
+  .consultation-form {
+    grid-template-columns: 1fr;
+  }
+  .form-full {
+    grid-column: span 1;
+  }
+}
+
+/* ==========================================================================
+   FOOTER (ROYAL HERITAGE)
+   DEEPKRISHNA ZAVERI SINCE 1952
+   ========================================================================== */
+.site-footer {
+  background: var(--color-wine-black);
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 80px 24px 30px;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-container {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-brand-logo {
+  height: 64px;
+  width: auto;
+  align-self: flex-start;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
+}
+
+.footer-legacy-title {
+  font-family: var(--font-serif-royal);
+  font-size: 1.15rem;
+  letter-spacing: 0.2em;
+  color: var(--color-gold-light);
+  text-transform: uppercase;
+}
+
+.footer-desc {
+  font-size: 0.86rem;
+  color: var(--color-cream-muted);
+  line-height: 1.7;
+}
+
+.footer-heading {
+  font-family: var(--font-serif-royal);
+  font-size: 0.82rem;
+  letter-spacing: 0.25em;
+  color: var(--color-gold-antique);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 32px;
+  height: 1px;
+  background: var(--color-gold-antique);
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  font-size: 0.85rem;
+  color: var(--color-cream-muted);
+  letter-spacing: 0.08em;
+  transition: var(--transition-smooth);
+}
+
+.footer-links a:hover {
+  color: var(--color-gold-light);
+  padding-left: 6px;
+}
+
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 0.86rem;
+  color: var(--color-cream-muted);
+}
+
+.footer-contact-info a {
+  color: var(--color-cream-warm);
+}
+
+.footer-contact-info a:hover {
+  color: var(--color-gold-light);
+}
+
+.footer-contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-contact-row i {
+  color: var(--color-gold-antique);
+  font-size: 1.1rem;
+  margin-top: 3px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  padding-top: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.76rem;
+  color: var(--color-cream-muted);
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
+   LIGHTBOX & DEMO MODALS
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 0, 2, 0.88);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-smooth);
+  padding: 24px;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-modal-content {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  background: var(--gradient-card);
+  border: 1px solid var(--color-gold-antique);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  color: var(--color-gold-light);
+  font-size: 1.8rem;
+  line-height: 1;
+  z-index: 10;
+}
+
+.lightbox-img-wrap {
+  max-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-wine-black);
+}
+
+.lightbox-img-wrap img {
+  max-height: 70vh;
+  width: auto;
+  object-fit: contain;
+}
+
+.lightbox-caption {
+  padding: 20px 24px;
+  text-align: center;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.lightbox-title {
+  font-family: var(--font-serif-royal);
+  font-size: 1.1rem;
+  letter-spacing: 0.16em;
+  color: var(--color-gold-light);
+  text-transform: uppercase;
+}
+
+/* Notification Toast */
+.demo-toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--gradient-card);
+  border: 1px solid var(--color-gold-antique);
+  color: var(--color-cream-pure);
+  padding: 16px 24px;
+  border-radius: 3px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+  z-index: 3000;
+  transform: translateY(120px);
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.demo-toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
