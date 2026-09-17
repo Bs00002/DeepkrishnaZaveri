@@ -19,6 +19,7 @@ secrets/
 scratch_*.py
 scratch/
 .system_generated/
+.vercel/
 
 # OS & Editor Files
 .DS_Store
@@ -29,6 +30,32 @@ desktop.ini
 *.swp
 *.swo
 
-# Large downloaded archives if any
+# Large downloaded archives & raw media dumps
 *.zip
 *.tar.gz
+downloaded_reels/
+drive_photos/
+drive_reels_jewellery/
+test_reels/
+photo_previews/
+reel_previews/
+reel_thumbnails/
+temp_vid_frames/
+temp_wa_inspect/
+test_DK162.JPG
+media/
+*.pdf
+
+# Python scratch scripts
+*.py
+drive_inventory.json
+reels_metadata.json
+
+# Temporary root images (processed copies live in assets/)
+1a5434d3-*.png
+46f5fcf0-*.png
+aa81911d-*.png
+cb317109-*.png
+e693d239-*.png
+image.png
+public/

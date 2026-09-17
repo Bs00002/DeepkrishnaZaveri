@@ -1,49 +1,95 @@
-# Deepkrishna Zaveri — Since 1952
-### Royal Indian Heritage & Bridal Jewellery
+# DEEPKRISHNA ZAVERI — A Legacy Since 1952
+### Premium Indian Jewellery House • Gandhinagar, Gujarat
 
-Official website demo for **Deepkrishna Zaveri (Since 1952)**, showcasing handcrafted bridal sets, heritage fine jewellery, traditional Gujarati craftsmanship, and bespoke commissions.
+Official premium website for **DEEPKRISHNA ZAVERI**, showcasing handcrafted bridal ensembles, 18K/22K/24K gold jewellery, 92.5 sterling silver, bespoke commissions, and the Deep-Krishna Bachat Yojana savings plan.
 
 ---
 
-## 🏛️ Brand & Heritage
+## 🏛️ Official Brand & Business Information
 
-- **Brand**: DEEPKRISHNA ZAVERI
-- **Legacy**: SINCE 1952 (Over seven decades of artisanal craftsmanship)
-- **Aesthetic**: Royal Maroon Velvet, Antique Gold, Warm Ivory, Deep Wine Burgundy
-- **Showroom**: Synergy Space, 7, Near D-Mart, Sargasan, Gandhinagar, Gujarat 382010
-- **Hours**: 8:30 AM – 10:30 PM Daily
-- **Telephone**: [+91 97555 59249](tel:+919755559249)
+- **Brand Name**: DEEPKRISHNA ZAVERI
+- **Business Roots**: Since 1952 (Beginning in Akrund)
+- **Current Showroom**: Established 2026
+- **Owner**: Jay Soni
+- **Showroom Address**: 7, Synergy Space, Near D-Mart, Sargasan, Gandhinagar, Gujarat 382010
+- **Confirmed Public Phone**: [+91 97555 9249](tel:+91975559249)
+- **Email**: [Deepkrishnazaveri@gmail.com](mailto:Deepkrishnazaveri@gmail.com)
 - **Instagram**: [@deepkrishnazaveri](https://www.instagram.com/deepkrishnazaveri/)
-- **Customer Rating**: 5.0 ★ (95 Google Verified Reviews)
+- **Showroom Hours**: 10:00 AM – 10:00 PM (Monday – Sunday)
+- **Trust & Compliance**: Hallmarked • GST Registered
 
 ---
 
-## ✨ Features & Architecture
+## ⏳ Verified Heritage Timeline
 
-- **Cinematic Regal Hero**: Grand gold crest, floating shimmer micro-particles, and high-definition bridal showcase.
-- **A Legacy Since 1952**: Authentic heritage narrative and four craftsmanship pillars.
-- **Curated Collections**: Bridal, Fine Jewellery, Traditional, and Bespoke.
-- **The Bridal Edit**: Interactive horizontal scrolling carousel of signature wedding looks.
-- **Bespoke Jewellery**: 3-stage custom design journey for personalized heirlooms.
-- **Jewellery Gallery**: Interactive filtered gallery with full-resolution Lightbox modal.
-- **Showroom & Contact**: Real verified Gandhinagar showroom details, direct calling, and directions.
-- **Responsive Architecture**: Fluid navigation across desktop, tablet, and mobile with animated drawer menu.
+> *"Four Chapters. One Continuing Legacy."*
+> *"From Akrund in 1952 to Deepkrishna Zaveri in 2026."*
+
+1. **1952 — AKRUND**: The first branch / beginning of the jewellery business.
+2. **1975 — DEHGAM**: Second branch.
+3. **2025 — NIKOL**: Third branch.
+4. **2026 — DEEPKRISHNA ZAVERI**: Fourth branch / current showroom chapter in Gandhinagar.
+
+---
+
+## ✨ Confirmed Offerings & Services
+
+- **Gold Jewellery**: 18K • 22K • 24K Gold
+- **Silver Jewellery**: 92.5 Sterling Silver
+- **Custom Jewellery**: Handcrafted according to customer requirements
+- **Bridal Jewellery**: Regal chokers, necklaces, jhumkas, and full bridal suites
+- **Deep-Krishna Bachat Yojana**: Structured showroom jewellery savings plans (11+1, 18+1.5, 24+2 months)
+- **6 Core Services**:
+  1. Custom Jewellery
+  2. Fast Repair Service
+  3. In-house Gold Ornament Production
+  4. In-house Silver Ornament Production
+  5. Old Gold Buying
+  6. Old Silver Buying
+
+---
+
+## 🎨 Luxury Design System
+
+- **Warm Cream Dominant (60–70%)**: `#FBF6ED` / `#F4EBE1`
+- **Deep Brown & Taupe (15–20%)**: `#3E2A23` / `#2E2420` / `#B7A696`
+- **Muted Wine / Burgundy (10–15%)**: `#722F37` / `#5A1E25`
+- **Antique Gold Detailing (5–10%)**: `#C9A96A` / `#DFCA9B`
+- **Typography**:
+  - Headings: *Playfair Display*
+  - Secondary: *Cormorant Garamond*
+  - Body & UI: *Montserrat*
+
+---
+
+## 📂 Complete Page Architecture
+
+- `index.html`: Cinematic homepage with Hero, Heritage timeline, Jewellery offerings, The Bridal Edit carousel, Services grid, Trust section, Bachat Yojana savings plan, Real Video/Reels showcase, Editorial gallery with Lightbox, Showroom guide, and Contact form.
+- `about.html`: Verified heritage narrative detailing the 4 chapters from Akrund (1952) to Gandhinagar (2026).
+- `jewellery.html`: Central jewellery hub exploring Gold, Silver, Bridal, and Custom.
+- `gold.html`: Dedicated 18K, 22K, and 24K Gold showcase with enquiry CTAs.
+- `silver.html`: Dedicated 92.5 Sterling Silver showcase.
+- `bridal.html`: Handcrafted bridal ensembles with consultation booking.
+- `custom.html`: Bespoke studio with direct requirement form and file attachment.
+- `services.html`: 6 verified services with descriptions and direct contact.
+- `savings-plan.html`: Deep-Krishna Bachat Yojana details with terms disclaimer.
+- `gallery.html`: Masonry exhibit with 100% real client photos and fullscreen zoom lightbox.
+- `showroom.html`: Showroom visiting guide with direct Google Maps navigation and calling.
+- `contact.html`: Official contact page featuring Owner Jay Soni, phone, email, and interactive inquiry form.
 
 ---
 
 ## 🚀 Running Locally
 
-Simply open `index.html` in any modern web browser or serve with a local web server:
-
 ```bash
-# Using Python
+# Python
 python -m http.server 8080
 
-# Or with Node.js
+# Or Node.js
 npx serve .
 ```
-Then visit `http://localhost:8080`.
+Visit `http://localhost:8080`.
 
 ---
 
-© 1952–2026 Deepkrishna Zaveri. All Rights Reserved.
+&copy; 1952–2026 DEEPKRISHNA ZAVERI. All Rights Reserved.
