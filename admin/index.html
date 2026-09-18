@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | DEEPKRISHNA ZAVERI</title>
+  
+  <link rel="icon" type="image/png" href="../assets/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/line-awesome.min.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <div class="admin-wrapper" id="admin-dashboard-view">
+    
+    <!-- Sidebar -->
+    <aside class="admin-sidebar" id="admin-sidebar">
+      <div class="sidebar-header">
+        <img src="../assets/brand/logo_badge_square.png" alt="Logo" class="sidebar-logo">
+        <div>
+          <div class="sidebar-title">DEEPKRISHNA</div>
+          <div class="sidebar-subtitle">Admin Panel</div>
+        </div>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li>
+          <a href="index.html" class="active">
+            <i class="las la-chart-pie"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="collections.html">
+            <i class="las la-gem"></i>
+            <span>Our Collections</span>
+          </a>
+        </li>
+        <li>
+          <a href="gallery.html">
+            <i class="las la-photo-video"></i>
+            <span>Gallery & Reels</span>
+          </a>
+        </li>
+        <li style="margin-top: 16px; border-top: 1px solid rgba(201, 169, 106, 0.15); padding-top: 16px;">
+          <a href="../index.html" target="_blank">
+            <i class="las la-external-link-alt"></i>
+            <span>View Public Site</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div class="user-badge">
+          <div class="user-avatar">JS</div>
+          <div>
+            <div class="user-info" id="admin-user-name">Jay Soni</div>
+            <div class="user-role">Showroom Owner</div>
+          </div>
+        </div>
+        <button class="btn-logout" title="Sign Out">
+          <i class="las la-sign-out-alt"></i>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="admin-main">
+      
+      <!-- Topbar -->
+      <div class="admin-topbar">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <button class="mobile-sidebar-toggle" id="mobile-sidebar-toggle" aria-label="Toggle Sidebar">
+            <i class="las la-bars"></i>
+          </button>
+          <div class="page-headline">
+            <h1>Executive Dashboard</h1>
+            <p>Welcome, Jay Soni. Manage live showroom collections, gallery photography, and showcase reels.</p>
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <button id="btn-export-backup" class="btn-admin btn-outline-admin btn-sm-admin" title="Download complete database backup">
+            <i class="las la-download"></i>
+            <span>Backup Data (JSON)</span>
+          </button>
+          <a href="../index.html" target="_blank" class="btn-admin btn-primary-admin btn-sm-admin">
+            <i class="las la-eye"></i>
+            <span>Visit Showroom Site</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Action Bar -->
+      <div class="admin-card" style="background: linear-gradient(135deg, var(--color-cream-warm) 0%, #fff 100%); border-left: 4px solid var(--color-gold-antique); padding: 20px 24px; margin-bottom: 28px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
+          <div>
+            <h3 style="font-family: var(--font-display); font-size: 1.15rem; color: var(--color-brown-primary); margin-bottom: 4px;">Quick Management Actions</h3>
+            <p style="font-size: 0.82rem; color: var(--color-taupe);">Easily update items in real time across the entire website.</p>
+          </div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="collections.html?action=new" class="btn-admin btn-gold-admin btn-sm-admin">
+              <i class="las la-plus-circle"></i>
+              <span>Add Collection</span>
+            </a>
+            <a href="gallery.html?action=new_image" class="btn-admin btn-primary-admin btn-sm-admin">
+              <i class="las la-image"></i>
+              <span>Add Gallery Image</span>
+            </a>
+            <a href="gallery.html?action=new_reel" class="btn-admin btn-primary-admin btn-sm-admin" style="background: var(--color-wine-muted); border-color: var(--color-wine-muted);">
+              <i class="las la-video"></i>
+              <span>Add Reel</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon-wrap gold">
+            <i class="las la-gem"></i>
+          </div>
+          <div>
+            <div class="stat-number" id="stat-collections">—</div>
+            <div class="stat-label">Total Collections</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrap">
+            <i class="las la-camera-retro"></i>
+          </div>
+          <div>
+            <div class="stat-number" id="stat-images">—</div>
+            <div class="stat-label">Gallery Images</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrap wine">
+            <i class="las la-play-circle"></i>
+          </div>
+          <div>
+            <div class="stat-number" id="stat-reels">—</div>
+            <div class="stat-label">Showroom Reels</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrap gold">
+            <i class="las la-star"></i>
+          </div>
+          <div>
+            <div class="stat-number" id="stat-featured">—</div>
+            <div class="stat-label">Featured Highlights</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Showroom Information Card -->
+      <div class="admin-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+          <h3 style="font-family: var(--font-display); font-size: 1.2rem; color: var(--color-brown-primary);">
+            Showroom Details & Verification
+          </h3>
+          <span class="badge badge-gold">Active Showroom 2026</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; font-size: 0.85rem;">
+          <div>
+            <span style="display: block; font-size: 0.72rem; text-transform: uppercase; color: var(--color-taupe); font-weight: 600;">Flagship Address</span>
+            <strong style="color: var(--color-brown-primary);">7, Synergy Space, Near D-Mart, Sargasan, Gandhinagar, Gujarat 382010</strong>
+          </div>
+          <div>
+            <span style="display: block; font-size: 0.72rem; text-transform: uppercase; color: var(--color-taupe); font-weight: 600;">Direct Phone</span>
+            <strong style="color: var(--color-brown-primary);">+91 97555 9249</strong>
+          </div>
+          <div>
+            <span style="display: block; font-size: 0.72rem; text-transform: uppercase; color: var(--color-taupe); font-weight: 600;">Official Email</span>
+            <strong style="color: var(--color-brown-primary);">Deepkrishnazaveri@gmail.com</strong>
+          </div>
+          <div>
+            <span style="display: block; font-size: 0.72rem; text-transform: uppercase; color: var(--color-taupe); font-weight: 600;">Timings</span>
+            <strong style="color: var(--color-brown-primary);">10:00 AM – 10:00 PM (Mon – Sun)</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Collection Summary -->
+      <div class="admin-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+          <div>
+            <h3 style="font-family: var(--font-display); font-size: 1.25rem; color: var(--color-brown-primary);">
+              Recent Collection Showcase
+            </h3>
+            <p style="font-size: 0.8rem; color: var(--color-taupe);">Dynamic jewellery items currently active in public collection.</p>
+          </div>
+          <a href="collections.html" class="btn-admin btn-outline-admin btn-sm-admin">
+            <span>Manage All Collections &rarr;</span>
+          </a>
+        </div>
+
+        <div class="table-responsive">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th style="width: 70px;">Preview</th>
+                <th>Jewellery Title</th>
+                <th>Status</th>
+                <th>Featured</th>
+              </tr>
+            </thead>
+            <tbody id="recent-collections-tbody">
+              <!-- Loaded by admin.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="../js/admin-auth.js"></script>
+  <script src="../js/data-store.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

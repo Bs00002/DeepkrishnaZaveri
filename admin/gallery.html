@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Gallery & Reels | DEEPKRISHNA ZAVERI Admin</title>
+  
+  <link rel="icon" type="image/png" href="../assets/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/line-awesome.min.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <div class="admin-wrapper" id="admin-gallery-view">
+    
+    <!-- Sidebar -->
+    <aside class="admin-sidebar" id="admin-sidebar">
+      <div class="sidebar-header">
+        <img src="../assets/brand/logo_badge_square.png" alt="Logo" class="sidebar-logo">
+        <div>
+          <div class="sidebar-title">DEEPKRISHNA</div>
+          <div class="sidebar-subtitle">Admin Panel</div>
+        </div>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li>
+          <a href="index.html">
+            <i class="las la-chart-pie"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="collections.html">
+            <i class="las la-gem"></i>
+            <span>Our Collections</span>
+          </a>
+        </li>
+        <li>
+          <a href="gallery.html" class="active">
+            <i class="las la-photo-video"></i>
+            <span>Gallery & Reels</span>
+          </a>
+        </li>
+        <li style="margin-top: 16px; border-top: 1px solid rgba(201, 169, 106, 0.15); padding-top: 16px;">
+          <a href="../index.html" target="_blank">
+            <i class="las la-external-link-alt"></i>
+            <span>View Public Site</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div class="user-badge">
+          <div class="user-avatar">JS</div>
+          <div>
+            <div class="user-info" id="admin-user-name">Jay Soni</div>
+            <div class="user-role">Showroom Owner</div>
+          </div>
+        </div>
+        <button class="btn-logout" title="Sign Out">
+          <i class="las la-sign-out-alt"></i>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="admin-main">
+      
+      <!-- Topbar -->
+      <div class="admin-topbar">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <button class="mobile-sidebar-toggle" id="mobile-sidebar-toggle" aria-label="Toggle Sidebar">
+            <i class="las la-bars"></i>
+          </button>
+          <div class="page-headline">
+            <h1>Showroom Gallery & Reels Management</h1>
+            <p>Curate client photography, high-definition reels, showroom views, and bridal moments.</p>
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <button id="btn-add-gallery" class="btn-admin btn-gold-admin">
+            <i class="las la-plus-circle"></i>
+            <span>Add Media (Image / Reel)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Filters & Stats Bar -->
+      <div class="admin-card" style="padding: 16px 20px; margin-bottom: 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <label for="filter-media-type" style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: var(--color-brown-primary);">Filter Type:</label>
+            <select id="filter-media-type" class="form-select" style="width: 170px; padding: 6px 12px;">
+              <option value="all">All Media</option>
+              <option value="image">Images Only</option>
+              <option value="reel">Reels Only</option>
+            </select>
+          </div>
+
+          <div style="font-size: 0.8rem; color: var(--color-taupe);">
+            <i class="las la-info-circle"></i> Click status badge to hide/show. Reorder with arrows to change display sequence.
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Table -->
+      <div class="admin-card" style="padding: 0; overflow: hidden;">
+        <div class="table-responsive">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th style="width: 40px; text-align: center;">Order</th>
+                <th style="width: 70px;">Thumbnail</th>
+                <th>Title & Type</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Featured</th>
+                <th style="text-align: right;">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="gallery-table-body">
+              <!-- Rendered by admin.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Add / Edit Gallery Modal -->
+  <div class="modal-overlay" id="gallery-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-title">Add Gallery Media</h3>
+        <button class="modal-close">&times;</button>
+      </div>
+      <form id="gallery-form">
+        <div class="modal-body">
+          <input type="hidden" id="gal-id">
+
+          <div class="form-group">
+            <label for="gal-title" class="form-label">Media Title *</label>
+            <input type="text" id="gal-title" class="form-input" placeholder="e.g. Signature Antique Gold Choker & Hathphool" required>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label for="gal-type" class="form-label">Media Type *</label>
+              <select id="gal-type" class="form-select" required>
+                <option value="image">Image (Photo)</option>
+                <option value="reel">Reel (Video)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="gal-category" class="form-label">Category *</label>
+              <select id="gal-category" class="form-select" required>
+                <option value="jewellery">Jewellery</option>
+                <option value="bridal">Bridal</option>
+                <option value="showroom">Showroom</option>
+                <option value="reels">Reels</option>
+                <option value="moments">Moments</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Media File / Upload</label>
+            <input type="file" id="gal-file" class="form-input" style="padding: 6px; margin-bottom: 8px;">
+            <label for="gal-url" class="form-label" style="font-size: 0.72rem;">Or Asset Path (e.g. assets/gallery/reels/REEL_-_13.mp4 or assets/gallery/photos/DK-4.jpg) *</label>
+            <input type="text" id="gal-url" class="form-input" placeholder="Path to media file" required>
+          </div>
+
+          <div class="form-group">
+            <label for="gal-thumb" class="form-label">Poster / Thumbnail URL (Required for Reels)</label>
+            <input type="text" id="gal-thumb" class="form-input" placeholder="e.g. assets/gallery/reels/REEL_-_13_poster.webp">
+            
+            <div class="preview-box" style="margin-top: 10px;">
+              <img id="gal-media-preview" src="" alt="Media Preview" class="preview-img" style="display: none;">
+              <span style="font-size: 0.8rem; color: var(--color-taupe);">Preview thumbnail will display here</span>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: center; margin-top: 14px;">
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="gal-order" class="form-label">Display Order</label>
+              <input type="number" id="gal-order" class="form-input" min="1" value="1">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="gal-status" class="form-label">Status</label>
+              <select id="gal-status" class="form-select">
+                <option value="active">Active (Visible)</option>
+                <option value="hidden">Hidden</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-top: 16px; margin-bottom: 0;">
+            <label class="form-checkbox-label">
+              <input type="checkbox" id="gal-featured">
+              <span style="font-weight: 600;">Feature in Highlights Carousel</span>
+            </label>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-admin btn-outline-admin modal-close">Cancel</button>
+          <button type="submit" class="btn-admin btn-gold-admin">Save Media</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../js/admin-auth.js"></script>
+  <script src="../js/data-store.js"></script>
+  <script src="admin.js"></script>
+  <script>
+    // Auto open modal with specific type if query params present
+    document.addEventListener('DOMContentLoaded', () => {
+      const p = new URLSearchParams(window.location.search);
+      const action = p.get('action');
+      if (action === 'new_image' || action === 'new_reel') {
+        const btn = document.getElementById('btn-add-gallery');
+        btn?.click();
+        const typeSelect = document.getElementById('gal-type');
+        if (typeSelect) {
+          typeSelect.value = action === 'new_reel' ? 'reel' : 'image';
+        }
+      }
+    });
+  </script>
+</body>
+</html>

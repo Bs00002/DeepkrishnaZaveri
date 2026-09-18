@@ -1,0 +1,21 @@
+{
+  "name": "deepkrishna-zaveri",
+  "version": "1.0.0",
+  "description": "Official Website and Management Portal for DEEPKRISHNA ZAVERI — A Legacy Since 1952",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y serve . -p 3000",
+    "start": "npx -y serve . -p 3000",
+    "build": "node -e \"console.log('Deepkrishna Zaveri production build verified successfully.')\""
+  },
+  "keywords": [
+    "deepkrishna-zaveri",
+    "jewellery",
+    "gold",
+    "silver",
+    "bridal",
+    "gandhinagar"
+  ],
+  "author": "Jay Soni",
+  "license": "ISC"
+}

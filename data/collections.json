@@ -1,0 +1,162 @@
+[
+  {
+    "id": "col-1",
+    "title": "Heritage Jadau Bridal Choker Set",
+    "category": "bridal",
+    "description": "Handcrafted bridal choker ensemble featuring intricate kundan jadau work, cluster pearls, and traditional Gujarati artisan detailing.",
+    "image": "assets/jewellery/bridal/DK-4.webp",
+    "featured": true,
+    "status": "active",
+    "displayOrder": 1
+  },
+  {
+    "id": "col-2",
+    "title": "Royal Kundan Mathapatti & Earrings",
+    "category": "bridal",
+    "description": "Statement bridal mathapatti and matching drop earrings crafted with fine traditional stone setting and antique gold finish.",
+    "image": "assets/jewellery/bridal/DK276.webp",
+    "featured": true,
+    "status": "active",
+    "displayOrder": 2
+  },
+  {
+    "id": "col-3",
+    "title": "22K Traditional Antique Gold Haram",
+    "category": "gold",
+    "description": "Elaborate multi-tier 22-karat yellow gold haram necklace with heritage floral repoussé craftsmanship.",
+    "image": "assets/jewellery/gold/DK229.webp",
+    "featured": true,
+    "status": "active",
+    "displayOrder": 3
+  },
+  {
+    "id": "col-4",
+    "title": "22K Hand-Carved Gold Temple Choker",
+    "category": "gold",
+    "description": "Intricately detailed 22-karat gold choker necklace celebrating authentic goldsmith traditions with fine texturing.",
+    "image": "assets/jewellery/gold/DK1.webp",
+    "featured": true,
+    "status": "active",
+    "displayOrder": 4
+  },
+  {
+    "id": "col-5",
+    "title": "Solid 92.5 Pure Silver Tribal Kada",
+    "category": "silver",
+    "description": "Heavy sterling 92.5 silver artisan bangle with antique oxidized finishing and filigree terminals.",
+    "image": "assets/jewellery/silver/DK70.webp",
+    "featured": true,
+    "status": "active",
+    "displayOrder": 5
+  },
+  {
+    "id": "col-6",
+    "title": "92.5 Sterling Silver Statement Hasli",
+    "category": "silver",
+    "description": "Contemporary handcrafted 92.5 silver torque necklace with delicate geometric floral engraving.",
+    "image": "assets/jewellery/silver/DK146.webp",
+    "featured": true,
+    "status": "active",
+    "displayOrder": 6
+  },
+  {
+    "id": "col-7",
+    "title": "92.5 Silver Intricate Jhumka Ensemble",
+    "category": "silver",
+    "description": "Authentic Gujarati silver jhumkas adorned with ghungroo drops and carved bell motifs.",
+    "image": "assets/jewellery/silver/DK139.webp",
+    "featured": false,
+    "status": "active",
+    "displayOrder": 7
+  },
+  {
+    "id": "col-8",
+    "title": "Bespoke Polki & Gemstone Cocktail Ring",
+    "category": "custom",
+    "description": "Custom-commissioned statement ring uniting uncut stones with hand-finished gold settings.",
+    "image": "assets/jewellery/custom/DK56.webp",
+    "featured": true,
+    "status": "active",
+    "displayOrder": 8
+  },
+  {
+    "id": "col-9",
+    "title": "Artisan Custom Hand-Engraved Bangle",
+    "category": "custom",
+    "description": "Custom tailored gold bangle crafted in-house according to personalized client requirements.",
+    "image": "assets/jewellery/custom/DK210.webp",
+    "featured": false,
+    "status": "active",
+    "displayOrder": 9
+  },
+  {
+    "id": "col-10",
+    "title": "Bridal Jadau Chandbali Set",
+    "category": "bridal",
+    "description": "Exquisite crescent moon chandbalis encrusted with uncut stones and lustrous pearl bunches.",
+    "image": "assets/jewellery/bridal/DK-2.webp",
+    "featured": true,
+    "status": "active",
+    "displayOrder": 10
+  },
+  {
+    "id": "col-11",
+    "title": "Royal Bridal Pearl & Gold Collar",
+    "category": "bridal",
+    "description": "Grand wedding necklace woven with fine pearls and antique gold floral motifs.",
+    "image": "assets/jewellery/bridal/DK243.webp",
+    "featured": false,
+    "status": "active",
+    "displayOrder": 11
+  },
+  {
+    "id": "col-12",
+    "title": "Classic 22K Gold Filigree Bangle",
+    "category": "gold",
+    "description": "Timeless 22-karat gold bangle featuring fine wirework and delicate hand-chiseled patterns.",
+    "image": "assets/jewellery/gold/DK120.webp",
+    "featured": false,
+    "status": "active",
+    "displayOrder": 12
+  },
+  {
+    "id": "col-13",
+    "title": "Handcrafted 92.5 Silver Waistband (Kamarbandh)",
+    "category": "silver",
+    "description": "Traditional Gujarati pure silver waistband with interlocking link chains and medallion drops.",
+    "image": "assets/jewellery/silver/DK142.webp",
+    "featured": false,
+    "status": "active",
+    "displayOrder": 13
+  },
+  {
+    "id": "col-14",
+    "title": "Custom Designed Heritage Pendant",
+    "category": "custom",
+    "description": "One-of-a-kind custom gold pendant handcrafted by our master karigars in Gandhinagar.",
+    "image": "assets/jewellery/custom/DK131.webp",
+    "featured": false,
+    "status": "active",
+    "displayOrder": 14
+  },
+  {
+    "id": "col-15",
+    "title": "22K Sculpted Gold Peacock Ring",
+    "category": "gold",
+    "description": "Regal openwork gold finger ring shaped with traditional peacock plumage motifs.",
+    "image": "assets/jewellery/rings/DK157.webp",
+    "featured": false,
+    "status": "active",
+    "displayOrder": 15
+  },
+  {
+    "id": "col-16",
+    "title": "Dual-Tone 92.5 Silver Payal Set",
+    "category": "silver",
+    "description": "Finely tuned silver payal handcrafted with traditional chime bells and secure clasps.",
+    "image": "assets/jewellery/silver/DK81.webp",
+    "featured": false,
+    "status": "active",
+    "displayOrder": 16
+  }
+]

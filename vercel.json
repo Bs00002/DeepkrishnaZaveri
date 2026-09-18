@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/admin", "destination": "/admin/index.html" },
+    { "source": "/admin/login", "destination": "/admin/login.html" },
+    { "source": "/admin/dashboard", "destination": "/admin/index.html" },
+    { "source": "/admin/collections", "destination": "/admin/collections.html" },
+    { "source": "/admin/gallery", "destination": "/admin/gallery.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/collection", "destination": "/collection.html" },
+    { "source": "/collections", "destination": "/collection.html" },
+    { "source": "/jewellery", "destination": "/collection.html" },
+    { "source": "/services", "destination": "/services.html" },
+    { "source": "/gallery", "destination": "/gallery.html" },
+    { "source": "/showroom", "destination": "/showroom.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/savings-plan", "destination": "/savings-plan.html" }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" }
+      ]
+    }
+  ]
+}

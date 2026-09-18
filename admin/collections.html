@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Collections | DEEPKRISHNA ZAVERI Admin</title>
+  
+  <link rel="icon" type="image/png" href="../assets/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/line-awesome.min.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <div class="admin-wrapper" id="admin-collections-view">
+    
+    <!-- Sidebar -->
+    <aside class="admin-sidebar" id="admin-sidebar">
+      <div class="sidebar-header">
+        <img src="../assets/brand/logo_badge_square.png" alt="Logo" class="sidebar-logo">
+        <div>
+          <div class="sidebar-title">DEEPKRISHNA</div>
+          <div class="sidebar-subtitle">Admin Panel</div>
+        </div>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li>
+          <a href="index.html">
+            <i class="las la-chart-pie"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="collections.html" class="active">
+            <i class="las la-gem"></i>
+            <span>Our Collections</span>
+          </a>
+        </li>
+        <li>
+          <a href="gallery.html">
+            <i class="las la-photo-video"></i>
+            <span>Gallery & Reels</span>
+          </a>
+        </li>
+        <li style="margin-top: 16px; border-top: 1px solid rgba(201, 169, 106, 0.15); padding-top: 16px;">
+          <a href="../index.html" target="_blank">
+            <i class="las la-external-link-alt"></i>
+            <span>View Public Site</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div class="user-badge">
+          <div class="user-avatar">JS</div>
+          <div>
+            <div class="user-info" id="admin-user-name">Jay Soni</div>
+            <div class="user-role">Showroom Owner</div>
+          </div>
+        </div>
+        <button class="btn-logout" title="Sign Out">
+          <i class="las la-sign-out-alt"></i>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="admin-main">
+      
+      <!-- Topbar -->
+      <div class="admin-topbar">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <button class="mobile-sidebar-toggle" id="mobile-sidebar-toggle" aria-label="Toggle Sidebar">
+            <i class="las la-bars"></i>
+          </button>
+          <div class="page-headline">
+            <h1>Jewellery Collections Management</h1>
+            <p>Add, edit, reorder, feature, and enable/disable jewellery items displayed on the public collection page.</p>
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <button id="btn-add-collection" class="btn-admin btn-gold-admin">
+            <i class="las la-plus-circle"></i>
+            <span>Add Collection Item</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Filters & Controls Bar -->
+      <div class="admin-card" style="padding: 16px 20px; margin-bottom: 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <label for="filter-category" style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: var(--color-brown-primary);">Filter by Category:</label>
+            <select id="filter-category" class="form-select" style="width: 200px; padding: 6px 12px;">
+              <option value="all">All Categories</option>
+              <option value="gold">Gold Jewellery</option>
+              <option value="silver">Silver Jewellery</option>
+              <option value="bridal">Bridal Jewellery</option>
+              <option value="custom">Custom Jewellery</option>
+            </select>
+          </div>
+
+          <div style="font-size: 0.8rem; color: var(--color-taupe);">
+            <i class="las la-info-circle"></i> Use arrow buttons to reorder. Click status/featured badges to toggle immediately.
+          </div>
+        </div>
+      </div>
+
+      <!-- Collections Table -->
+      <div class="admin-card" style="padding: 0; overflow: hidden;">
+        <div class="table-responsive">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th style="width: 40px; text-align: center;">Order</th>
+                <th style="width: 70px;">Image</th>
+                <th>Title & Description</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Featured</th>
+                <th style="text-align: right;">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="collections-table-body">
+              <!-- Rendered by admin.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Add / Edit Collection Modal -->
+  <div class="modal-overlay" id="collection-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-title">Add New Collection Item</h3>
+        <button class="modal-close">&times;</button>
+      </div>
+      <form id="collection-form">
+        <div class="modal-body">
+          <input type="hidden" id="col-id">
+
+          <div class="form-group">
+            <label for="col-title" class="form-label">Collection Title *</label>
+            <input type="text" id="col-title" class="form-input" placeholder="e.g. 22K Traditional Antique Gold Haram" required>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label for="col-category" class="form-label">Category *</label>
+              <select id="col-category" class="form-select" required>
+                <option value="gold">Gold</option>
+                <option value="silver">Silver</option>
+                <option value="bridal">Bridal</option>
+                <option value="custom">Custom</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="col-status" class="form-label">Status *</label>
+              <select id="col-status" class="form-select">
+                <option value="active">Active (Visible)</option>
+                <option value="disabled">Disabled (Hidden)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="col-description" class="form-label">Description (Editorial luxury tone)</label>
+            <textarea id="col-description" class="form-textarea" placeholder="Describe the jewellery craftsmanship, motifs, and material..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Jewellery Image *</label>
+            <div style="display: flex; gap: 10px; margin-bottom: 8px;">
+              <input type="file" id="col-image-file" class="form-input" accept="image/*" style="padding: 6px;">
+            </div>
+            <input type="text" id="col-image-url" class="form-input" placeholder="Or enter image asset path (e.g. assets/jewellery/gold/DK229.webp)" required>
+            
+            <div class="preview-box">
+              <img id="col-image-preview" src="" alt="Preview" class="preview-img" style="display: none;">
+              <span style="font-size: 0.8rem; color: var(--color-taupe);">Select an image or enter a path above</span>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: center; margin-top: 14px;">
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="col-order" class="form-label">Display Order</label>
+              <input type="number" id="col-order" class="form-input" min="1" value="1">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0; padding-top: 20px;">
+              <label class="form-checkbox-label">
+                <input type="checkbox" id="col-featured">
+                <span style="font-weight: 600;">Show in Featured Highlights</span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-admin btn-outline-admin modal-close">Cancel</button>
+          <button type="submit" class="btn-admin btn-gold-admin">Save Item</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../js/admin-auth.js"></script>
+  <script src="../js/data-store.js"></script>
+  <script src="admin.js"></script>
+  <script>
+    // Auto open modal if ?action=new in URL
+    document.addEventListener('DOMContentLoaded', () => {
+      const p = new URLSearchParams(window.location.search);
+      if (p.get('action') === 'new') {
+        const btn = document.getElementById('btn-add-collection');
+        btn?.click();
+      }
+    });
+  </script>
+</body>
+</html>
