@@ -241,6 +241,9 @@
         <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: 40px; flex-wrap: wrap;">
           <button class="btn btn-sm btn-gold filter-gal-btn active" data-filter="all">ALL</button>
           <button class="btn btn-sm btn-outline filter-gal-btn" data-filter="jewellery">JEWELLERY</button>
+          <button class="btn btn-sm btn-outline filter-gal-btn" data-filter="earrings">EARRINGS</button>
+          <button class="btn btn-sm btn-outline filter-gal-btn" data-filter="rings">RINGS</button>
+          <button class="btn btn-sm btn-outline filter-gal-btn" data-filter="necklaces">NECKLACES</button>
           <button class="btn btn-sm btn-outline filter-gal-btn" data-filter="bridal">BRIDAL</button>
           <button class="btn btn-sm btn-outline filter-gal-btn" data-filter="showroom">SHOWROOM</button>
           <button class="btn btn-sm btn-outline filter-gal-btn" data-filter="reels">REELS</button>
@@ -485,6 +488,8 @@
         if (filter !== 'all') {
           if (filter === 'reels') {
             active = active.filter(g => g.mediaType === 'reel');
+          } else if (filter === 'jewellery') {
+            active = active.filter(g => ['jewellery', 'earrings', 'rings', 'necklaces', 'bangles', 'gold', 'silver'].includes(g.category.toLowerCase()));
           } else {
             active = active.filter(g => g.category.toLowerCase() === filter.toLowerCase());
           }
@@ -550,7 +555,14 @@
         });
       });
 
-      renderGallery('all');
+      const urlParams = new URLSearchParams(window.location.search);
+      const initialTab = urlParams.get('tab') || urlParams.get('category') || 'all';
+      const targetBtn = document.querySelector(`.filter-gal-btn[data-filter="${initialTab.toLowerCase()}"]`);
+      if (targetBtn) {
+        targetBtn.click();
+      } else {
+        renderGallery('all');
+      }
     });
   </script>
 </body>
