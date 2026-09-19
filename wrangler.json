@@ -1,8 +1,9 @@
 {
   "name": "deepkrishnazaveri",
-  "compatibility_date": "2026-09-19",
-  "pages_build_output_dir": ".",
-  "site": {
-    "bucket": "."
+  "main": "worker.js",
+  "compatibility_date": "2024-09-23",
+  "assets": {
+    "directory": "dist",
+    "binding": "ASSETS"
   }
 }

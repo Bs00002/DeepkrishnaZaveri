@@ -1,0 +1,20 @@
+.git
+node_modules
+downloaded_reels
+drive_photos
+drive_reels_jewellery
+images of dpz
+temp_vid_frames
+temp_wa_inspect
+test_reels
+contact_sheets
+photo_previews
+reel_previews
+reel_thumbnails
+reel
+media
+test_DK162.JPG
+*.py
+*.pdf
+*.zip
+*.tar.gz
