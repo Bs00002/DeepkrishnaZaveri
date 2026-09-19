@@ -45,21 +45,6 @@ const AdminAuth = (() => {
     },
 
     async login(username, password) {
-      function checkStaticCredentials(u, p) {
-        if (
-          u &&
-          u.trim().toLowerCase() === 'jay soni' &&
-          p === 'Jaysoni@777'
-        ) {
-          const dummyToken = 'dz_sess_' + btoa(Date.now() + ':' + u) + '.local';
-          const user = { username: 'Jay Soni', role: 'admin' };
-          localStorage.setItem(TOKEN_KEY, dummyToken);
-          localStorage.setItem(USER_KEY, JSON.stringify(user));
-          return { success: true, user };
-        }
-        return { success: false, error: 'Invalid username or password' };
-      }
-
       // 1. Send credentials to secure serverless API
       try {
         const res = await fetch('/api/auth', {
@@ -75,15 +60,26 @@ const AdminAuth = (() => {
             localStorage.setItem(USER_KEY, JSON.stringify(data.user));
             return { success: true, user: data.user };
           }
-        } else if (res.status === 404) {
-          // Local static dev server where /api/auth is not running
-          return checkStaticCredentials(username, password);
         } else {
           const errData = await res.json().catch(() => ({}));
           return { success: false, error: errData.error || 'Authentication failed' };
         }
       } catch (err) {
-        return checkStaticCredentials(username, password);
+        // Fallback for static file testing if API is temporarily unavailable
+        // We verify that the user entered the authorized credentials
+        if (
+          username &&
+          username.trim().toLowerCase() === 'jay soni' &&
+          password === 'Jaysoni@777'
+        ) {
+          // Generate a local signed session
+          const dummyToken = 'dz_sess_' + btoa(Date.now() + ':' + username) + '.local';
+          const user = { username: 'Jay Soni', role: 'admin' };
+          localStorage.setItem(TOKEN_KEY, dummyToken);
+          localStorage.setItem(USER_KEY, JSON.stringify(user));
+          return { success: true, user };
+        }
+        return { success: false, error: 'Invalid username or password' };
       }
 
       return { success: false, error: 'Invalid credentials' };

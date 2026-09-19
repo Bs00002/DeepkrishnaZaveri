@@ -52,34 +52,19 @@ const DataStore = (() => {
         return local;
       }
 
-      // 3. Fallback to static data/collections.json (supports root, /admin, and file://)
-      const data = await this.fetchJsonFallback('data/collections.json');
-      if (data && Array.isArray(data)) {
-        setLocal(COLLECTIONS_KEY, data);
-        return data;
+      // 3. Fallback to static data/collections.json
+      try {
+        const res = await fetch('data/collections.json');
+        if (res.ok) {
+          const data = await res.json();
+          setLocal(COLLECTIONS_KEY, data);
+          return data;
+        }
+      } catch (e) {
+        console.error('Failed to load default collections:', e);
       }
 
       return [];
-    },
-
-    /**
-     * Resilient fetcher trying multiple path relative depths
-     */
-    async fetchJsonFallback(relPath) {
-      const candidates = [
-        '/' + relPath.replace(/^\/+/, ''),
-        '../' + relPath.replace(/^\/+/, ''),
-        relPath
-      ];
-      for (const p of candidates) {
-        try {
-          const res = await fetch(p);
-          if (res.ok) {
-            return await res.json();
-          }
-        } catch (e) {}
-      }
-      return null;
     },
 
     /**
@@ -106,11 +91,16 @@ const DataStore = (() => {
         return local;
       }
 
-      // 3. Fallback to static data/gallery.json (supports root, /admin, and file://)
-      const data = await this.fetchJsonFallback('data/gallery.json');
-      if (data && Array.isArray(data)) {
-        setLocal(GALLERY_KEY, data);
-        return data;
+      // 3. Fallback to static data/gallery.json
+      try {
+        const res = await fetch('data/gallery.json');
+        if (res.ok) {
+          const data = await res.json();
+          setLocal(GALLERY_KEY, data);
+          return data;
+        }
+      } catch (e) {
+        console.error('Failed to load default gallery:', e);
       }
 
       return [];

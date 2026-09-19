@@ -5,14 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Manage Gallery & Reels | DEEPKRISHNA ZAVERI Admin</title>
   
-  <link rel="icon" type="image/png" href="../assets/brand/favicon.png">
   <link rel="icon" type="image/png" href="/assets/brand/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/line-awesome.min.css">
   <link rel="stylesheet" href="/css/line-awesome.min.css">
-  <link rel="stylesheet" href="admin.css">
   <link rel="stylesheet" href="/admin/admin.css">
 </head>
 <body>
@@ -22,7 +19,7 @@
     <!-- Sidebar -->
     <aside class="admin-sidebar" id="admin-sidebar">
       <div class="sidebar-header">
-        <img src="../assets/brand/logo_badge_square.png" alt="Logo" class="sidebar-logo">
+        <img src="/assets/brand/logo_badge_square.png" alt="Logo" class="sidebar-logo">
         <div>
           <div class="sidebar-title">DEEPKRISHNA</div>
           <div class="sidebar-subtitle">Admin Panel</div>
@@ -31,25 +28,25 @@
 
       <ul class="sidebar-menu">
         <li>
-          <a href="index.html">
+          <a href="/admin/index.html">
             <i class="las la-chart-pie"></i>
             <span>Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="collections.html">
+          <a href="/admin/collections.html">
             <i class="las la-gem"></i>
             <span>Our Collections</span>
           </a>
         </li>
         <li>
-          <a href="gallery.html" class="active">
+          <a href="/admin/gallery.html" class="active">
             <i class="las la-photo-video"></i>
             <span>Gallery & Reels</span>
           </a>
         </li>
         <li style="margin-top: 16px; border-top: 1px solid rgba(201, 169, 106, 0.15); padding-top: 16px;">
-          <a href="../index.html" target="_blank">
+          <a href="/index.html" target="_blank">
             <i class="las la-external-link-alt"></i>
             <span>View Public Site</span>
           </a>
@@ -80,29 +77,48 @@
             <i class="las la-bars"></i>
           </button>
           <div class="page-headline">
-            <h1>Showroom Gallery & Reels Management</h1>
-            <p>Curate client photography, high-definition reels, showroom views, and bridal moments.</p>
+            <h1>Gallery Photography & Showroom Reels</h1>
+            <p>Manage real client photography, showroom reels, video thumbnails, and visual highlights.</p>
           </div>
         </div>
 
         <div class="topbar-actions">
-          <button id="btn-add-gallery" class="btn-admin btn-gold-admin">
+          <button id="btn-add-gallery-item" class="btn-admin btn-gold-admin">
             <i class="las la-plus-circle"></i>
-            <span>Add Media (Image / Reel)</span>
+            <span>Add Gallery Media</span>
           </button>
         </div>
       </div>
 
-      <!-- Filters & Stats Bar -->
+      <!-- Filters & Controls Bar -->
       <div class="admin-card" style="padding: 16px 20px; margin-bottom: 20px;">
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
-          <div style="display: flex; align-items: center; gap: 12px;">
-            <label for="filter-media-type" style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: var(--color-brown-primary);">Filter Type:</label>
-            <select id="filter-media-type" class="form-select" style="width: 170px; padding: 6px 12px;">
-              <option value="all">All Media</option>
-              <option value="image">Images Only</option>
-              <option value="reel">Reels Only</option>
-            </select>
+          <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <label for="filter-gal-category" style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: var(--color-brown-primary);">Category:</label>
+              <select id="filter-gal-category" class="form-select" style="width: 180px; padding: 6px 12px;">
+                <option value="all">All Categories</option>
+                <option value="jewellery">Jewellery</option>
+                <option value="earrings">Earrings</option>
+                <option value="rings">Rings</option>
+                <option value="necklaces">Necklaces</option>
+                <option value="bangles">Bangles & Bracelets</option>
+                <option value="bridal">Bridal</option>
+                <option value="silver">Silver</option>
+                <option value="showroom">Showroom</option>
+                <option value="reels">Reels</option>
+                <option value="moments">Moments</option>
+              </select>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <label for="filter-gal-type" style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: var(--color-brown-primary);">Type:</label>
+              <select id="filter-gal-type" class="form-select" style="width: 140px; padding: 6px 12px;">
+                <option value="all">All Media</option>
+                <option value="image">Images Only</option>
+                <option value="reel">Reels Only</option>
+              </select>
+            </div>
           </div>
 
           <div style="font-size: 0.8rem; color: var(--color-taupe);">
@@ -227,20 +243,23 @@
     </div>
   </div>
 
-  <script src="../js/admin-auth.js"></script>
-  <script src="../js/data-store.js"></script>
-  <script src="admin.js"></script>
+  <script src="/js/admin-auth.js"></script>
+  <script src="/js/data-store.js"></script>
+  <script src="/admin/admin.js"></script>
   <script>
-    // Auto open modal with specific type if query params present
+    // Auto open modal if ?action=new_image or ?action=new_reel in URL
     document.addEventListener('DOMContentLoaded', () => {
       const p = new URLSearchParams(window.location.search);
       const action = p.get('action');
       if (action === 'new_image' || action === 'new_reel') {
-        const btn = document.getElementById('btn-add-gallery');
+        const btn = document.getElementById('btn-add-gallery-item');
         btn?.click();
-        const typeSelect = document.getElementById('gal-type');
-        if (typeSelect) {
-          typeSelect.value = action === 'new_reel' ? 'reel' : 'image';
+        if (action === 'new_reel') {
+          const typeSelect = document.getElementById('gal-type');
+          if (typeSelect) {
+            typeSelect.value = 'reel';
+            typeSelect.dispatchEvent(new Event('change'));
+          }
         }
       }
     });

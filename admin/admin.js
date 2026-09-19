@@ -32,11 +32,6 @@ function readFileAsDataURL(file) {
     reader.onerror = reject;
     reader.readAsDataURL(file);
   });
-// Asset path normalizer for bulletproof rendering in /admin or root
-function resolveAsset(p) {
-  if (!p) return '/assets/brand/favicon.png';
-  if (p.startsWith('http') || p.startsWith('data:') || p.startsWith('blob:')) return p;
-  return '/' + p.replace(/^\/+/, '');
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -91,7 +86,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       recentTable.innerHTML = collections.slice(0, 5).map(c => `
         <tr>
           <td>
-            <img src="${resolveAsset(c.image)}" alt="${c.title}" class="item-thumb" onerror="this.src='/assets/brand/favicon.png'">
+            <img src="${c.image}" alt="${c.title}" class="item-thumb" onerror="this.src='assets/brand/favicon.png'">
           </td>
           <td>
             <strong>${c.title}</strong>
@@ -147,7 +142,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             </div>
           </td>
           <td style="width: 70px;">
-            <img src="${resolveAsset(c.image)}" alt="${c.title}" class="item-thumb" onerror="this.src='/assets/brand/favicon.png'">
+            <img src="${c.image}" alt="${c.title}" class="item-thumb" onerror="this.src='assets/brand/favicon.png'">
           </td>
           <td>
             <strong>${c.title}</strong>
@@ -378,7 +373,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             </div>
           </td>
           <td style="width: 70px;">
-            <img src="${resolveAsset(g.thumbnail || g.mediaUrl)}" alt="${g.title}" class="item-thumb ${g.mediaType === 'reel' ? 'reel-thumb' : ''}" onerror="this.src='/assets/brand/favicon.png'">
+            <img src="${g.thumbnail || g.mediaUrl}" alt="${g.title}" class="item-thumb ${g.mediaType === 'reel' ? 'reel-thumb' : ''}" onerror="this.src='assets/brand/favicon.png'">
           </td>
           <td>
             <strong>${g.title}</strong>
