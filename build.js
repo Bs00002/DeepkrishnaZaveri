@@ -26,7 +26,7 @@ function copyRecursive(src, dest) {
   }
 }
 
-// 1. Copy top-level HTML files
+// 1. Copy top-level HTML & essential config files
 const rootFiles = fs.readdirSync(rootDir);
 for (const file of rootFiles) {
   if (file.endsWith('.html') || file === '_headers' || file === 'logo.png') {
@@ -35,8 +35,8 @@ for (const file of rootFiles) {
   }
 }
 
-// 2. Copy directories
-const dirsToCopy = ['assets', 'css', 'js', 'fonts', 'data', 'admin', 'images'];
+// 2. Copy production directories
+const dirsToCopy = ['assets', 'css', 'js', 'fonts', 'data', 'admin'];
 for (const d of dirsToCopy) {
   const srcPath = path.join(rootDir, d);
   const destPath = path.join(distDir, d);
