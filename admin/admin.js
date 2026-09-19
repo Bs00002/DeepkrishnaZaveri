@@ -373,7 +373,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             </div>
           </td>
           <td style="width: 70px;">
-            <img src="${g.thumbnail || g.mediaUrl}" alt="${g.title}" class="item-thumb ${g.mediaType === 'reel' ? 'reel-thumb' : ''}" onerror="this.src='assets/brand/favicon.png'">
+            <img src="${g.thumbnail || g.thumb || g.mediaUrl || g.src}" alt="${g.title}" class="item-thumb ${g.mediaType === 'reel' ? 'reel-thumb' : ''}" onerror="this.src='/assets/brand/favicon.png'">
           </td>
           <td>
             <strong>${g.title}</strong>

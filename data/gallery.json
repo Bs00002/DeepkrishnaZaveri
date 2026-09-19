@@ -8,7 +8,9 @@
     "thumb": "assets/showroom/hero_showroom.webp",
     "featured": true,
     "status": "active",
-    "displayOrder": 1
+    "displayOrder": 1,
+    "mediaUrl": "assets/showroom/hero_showroom.webp",
+    "thumbnail": "assets/showroom/hero_showroom.webp"
   },
   {
     "id": "gal-r13",
@@ -19,7 +21,9 @@
     "thumb": "assets/gallery/reels/REEL_-_13_poster.webp",
     "featured": true,
     "status": "active",
-    "displayOrder": 2
+    "displayOrder": 2,
+    "mediaUrl": "assets/gallery/reels/REEL_-_13.mp4",
+    "thumbnail": "assets/gallery/reels/REEL_-_13_poster.webp"
   },
   {
     "id": "gal-r01",
@@ -30,7 +34,9 @@
     "thumb": "assets/gallery/reels/REEL_-_01_poster.webp",
     "featured": true,
     "status": "active",
-    "displayOrder": 3
+    "displayOrder": 3,
+    "mediaUrl": "assets/gallery/reels/REEL_-_01.mp4",
+    "thumbnail": "assets/gallery/reels/REEL_-_01_poster.webp"
   },
   {
     "id": "gal-r03",
@@ -41,7 +47,9 @@
     "thumb": "assets/gallery/reels/REEL_-_03_poster.webp",
     "featured": true,
     "status": "active",
-    "displayOrder": 4
+    "displayOrder": 4,
+    "mediaUrl": "assets/gallery/reels/REEL_-_03.mp4",
+    "thumbnail": "assets/gallery/reels/REEL_-_03_poster.webp"
   },
   {
     "id": "gal-r07",
@@ -52,7 +60,9 @@
     "thumb": "assets/gallery/reels/REEL_-_07_poster.webp",
     "featured": true,
     "status": "active",
-    "displayOrder": 5
+    "displayOrder": 5,
+    "mediaUrl": "assets/gallery/reels/REEL_-_07.mp4",
+    "thumbnail": "assets/gallery/reels/REEL_-_07_poster.webp"
   },
   {
     "id": "gal-r02",
@@ -63,7 +73,9 @@
     "thumb": "assets/gallery/reels/REEL_-_02_poster.webp",
     "featured": true,
     "status": "active",
-    "displayOrder": 6
+    "displayOrder": 6,
+    "mediaUrl": "assets/gallery/reels/REEL_-_02.mp4",
+    "thumbnail": "assets/gallery/reels/REEL_-_02_poster.webp"
   },
   {
     "id": "gal-r08",
@@ -74,7 +86,9 @@
     "thumb": "assets/gallery/reels/REEL_-_08_poster.webp",
     "featured": true,
     "status": "active",
-    "displayOrder": 7
+    "displayOrder": 7,
+    "mediaUrl": "assets/gallery/reels/REEL_-_08.mp4",
+    "thumbnail": "assets/gallery/reels/REEL_-_08_poster.webp"
   },
   {
     "id": "gal-r18",
@@ -85,7 +99,9 @@
     "thumb": "assets/gallery/reels/REEL_-_18_poster.webp",
     "featured": true,
     "status": "active",
-    "displayOrder": 8
+    "displayOrder": 8,
+    "mediaUrl": "assets/gallery/reels/REEL_-_18.mp4",
+    "thumbnail": "assets/gallery/reels/REEL_-_18_poster.webp"
   },
   {
     "id": "gal-p-e1",
@@ -96,7 +112,9 @@
     "thumb": "assets/jewellery/earrings/DK100_med.webp",
     "featured": true,
     "status": "active",
-    "displayOrder": 9
+    "displayOrder": 9,
+    "mediaUrl": "assets/jewellery/earrings/DK100.webp",
+    "thumbnail": "assets/jewellery/earrings/DK100_med.webp"
   },
   {
     "id": "gal-p-e2",
@@ -107,7 +125,9 @@
     "thumb": "assets/jewellery/earrings/DK115_med.webp",
     "featured": true,
     "status": "active",
-    "displayOrder": 10
+    "displayOrder": 10,
+    "mediaUrl": "assets/jewellery/earrings/DK115.webp",
+    "thumbnail": "assets/jewellery/earrings/DK115_med.webp"
   },
   {
     "id": "gal-p-e3",
@@ -118,7 +138,9 @@
     "thumb": "assets/jewellery/earrings/DK248_med.webp",
     "featured": false,
     "status": "active",
-    "displayOrder": 11
+    "displayOrder": 11,
+    "mediaUrl": "assets/jewellery/earrings/DK248.webp",
+    "thumbnail": "assets/jewellery/earrings/DK248_med.webp"
   },
   {
     "id": "gal-p-r1",
@@ -129,7 +151,9 @@
     "thumb": "assets/jewellery/rings/DK-5_med.webp",
     "featured": true,
     "status": "active",
-    "displayOrder": 12
+    "displayOrder": 12,
+    "mediaUrl": "assets/jewellery/rings/DK-5.webp",
+    "thumbnail": "assets/jewellery/rings/DK-5_med.webp"
   },
   {
     "id": "gal-p-r2",
@@ -140,7 +164,9 @@
     "thumb": "assets/jewellery/rings/DK203_med.webp",
     "featured": true,
     "status": "active",
-    "displayOrder": 13
+    "displayOrder": 13,
+    "mediaUrl": "assets/jewellery/rings/DK203.webp",
+    "thumbnail": "assets/jewellery/rings/DK203_med.webp"
   },
   {
     "id": "gal-p-r3",
@@ -151,7 +177,9 @@
     "thumb": "assets/jewellery/rings/DK232_med.webp",
     "featured": false,
     "status": "active",
-    "displayOrder": 14
+    "displayOrder": 14,
+    "mediaUrl": "assets/jewellery/rings/DK232.webp",
+    "thumbnail": "assets/jewellery/rings/DK232_med.webp"
   },
   {
     "id": "gal-p-n1",
@@ -162,7 +190,9 @@
     "thumb": "assets/jewellery/necklaces/DK229_med.webp",
     "featured": true,
     "status": "active",
-    "displayOrder": 15
+    "displayOrder": 15,
+    "mediaUrl": "assets/jewellery/necklaces/DK229.webp",
+    "thumbnail": "assets/jewellery/necklaces/DK229_med.webp"
   },
   {
     "id": "gal-p-n2",
@@ -173,7 +203,9 @@
     "thumb": "assets/jewellery/necklaces/DK151_med.webp",
     "featured": true,
     "status": "active",
-    "displayOrder": 16
+    "displayOrder": 16,
+    "mediaUrl": "assets/jewellery/necklaces/DK151.webp",
+    "thumbnail": "assets/jewellery/necklaces/DK151_med.webp"
   },
   {
     "id": "gal-p-n3",
@@ -184,7 +216,9 @@
     "thumb": "assets/jewellery/necklaces/DK106_med.webp",
     "featured": false,
     "status": "active",
-    "displayOrder": 17
+    "displayOrder": 17,
+    "mediaUrl": "assets/jewellery/necklaces/DK106.webp",
+    "thumbnail": "assets/jewellery/necklaces/DK106_med.webp"
   },
   {
     "id": "gal-p-b1",
@@ -195,7 +229,9 @@
     "thumb": "assets/jewellery/bridal/DK-4_med.webp",
     "featured": true,
     "status": "active",
-    "displayOrder": 18
+    "displayOrder": 18,
+    "mediaUrl": "assets/jewellery/bridal/DK-4.webp",
+    "thumbnail": "assets/jewellery/bridal/DK-4_med.webp"
   },
   {
     "id": "gal-p-b2",
@@ -206,7 +242,9 @@
     "thumb": "assets/jewellery/bridal/DK276_med.webp",
     "featured": true,
     "status": "active",
-    "displayOrder": 19
+    "displayOrder": 19,
+    "mediaUrl": "assets/jewellery/bridal/DK276.webp",
+    "thumbnail": "assets/jewellery/bridal/DK276_med.webp"
   },
   {
     "id": "gal-p-b3",
@@ -217,7 +255,9 @@
     "thumb": "assets/jewellery/bridal/DK256_med.webp",
     "featured": true,
     "status": "active",
-    "displayOrder": 20
+    "displayOrder": 20,
+    "mediaUrl": "assets/jewellery/bridal/DK256.webp",
+    "thumbnail": "assets/jewellery/bridal/DK256_med.webp"
   },
   {
     "id": "gal-p-s1",
@@ -228,7 +268,9 @@
     "thumb": "assets/jewellery/silver/DK67_med.webp",
     "featured": true,
     "status": "active",
-    "displayOrder": 21
+    "displayOrder": 21,
+    "mediaUrl": "assets/jewellery/silver/DK67.webp",
+    "thumbnail": "assets/jewellery/silver/DK67_med.webp"
   },
   {
     "id": "gal-p-s2",
@@ -239,7 +281,9 @@
     "thumb": "assets/jewellery/silver/DK38_med.webp",
     "featured": true,
     "status": "active",
-    "displayOrder": 22
+    "displayOrder": 22,
+    "mediaUrl": "assets/jewellery/silver/DK38.webp",
+    "thumbnail": "assets/jewellery/silver/DK38_med.webp"
   },
   {
     "id": "gal-p-s3",
@@ -250,7 +294,9 @@
     "thumb": "assets/jewellery/silver/DK146_med.webp",
     "featured": false,
     "status": "active",
-    "displayOrder": 23
+    "displayOrder": 23,
+    "mediaUrl": "assets/jewellery/silver/DK146.webp",
+    "thumbnail": "assets/jewellery/silver/DK146_med.webp"
   },
   {
     "id": "gal-p-m1",
@@ -261,7 +307,9 @@
     "thumb": "assets/jewellery/bridal/DK252_med.webp",
     "featured": true,
     "status": "active",
-    "displayOrder": 24
+    "displayOrder": 24,
+    "mediaUrl": "assets/jewellery/bridal/DK252.webp",
+    "thumbnail": "assets/jewellery/bridal/DK252_med.webp"
   },
   {
     "id": "gal-p-m2",
@@ -272,6 +320,8 @@
     "thumb": "assets/jewellery/bridal/DK166_med.webp",
     "featured": false,
     "status": "active",
-    "displayOrder": 25
+    "displayOrder": 25,
+    "mediaUrl": "assets/jewellery/bridal/DK166.webp",
+    "thumbnail": "assets/jewellery/bridal/DK166_med.webp"
   }
 ]

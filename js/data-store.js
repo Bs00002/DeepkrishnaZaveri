@@ -71,14 +71,30 @@ const DataStore = (() => {
      * Get gallery items list
      */
     async getGallery() {
+      function normalize(list) {
+        if (!Array.isArray(list)) return [];
+        return list.map(item => {
+          const url = item.mediaUrl || item.src || '';
+          const thumb = item.thumbnail || item.thumb || url;
+          return {
+            ...item,
+            mediaUrl: url,
+            thumbnail: thumb,
+            src: url,
+            thumb: thumb
+          };
+        });
+      }
+
       // 1. Try serverless API
       try {
         const res = await fetch('/api/gallery', { cache: 'no-cache' });
         if (res.ok) {
           const json = await res.json();
           if (json && json.data && Array.isArray(json.data)) {
-            setLocal(GALLERY_KEY, json.data);
-            return json.data;
+            const normalized = normalize(json.data);
+            setLocal(GALLERY_KEY, normalized);
+            return normalized;
           }
         }
       } catch (err) {
@@ -88,7 +104,7 @@ const DataStore = (() => {
       // 2. Local persistence
       const local = getLocal(GALLERY_KEY);
       if (local && Array.isArray(local) && local.length > 0) {
-        return local;
+        return normalize(local);
       }
 
       // 3. Fallback to static data/gallery.json
@@ -96,8 +112,9 @@ const DataStore = (() => {
         const res = await fetch('data/gallery.json');
         if (res.ok) {
           const data = await res.json();
-          setLocal(GALLERY_KEY, data);
-          return data;
+          const normalized = normalize(data);
+          setLocal(GALLERY_KEY, normalized);
+          return normalized;
         }
       } catch (e) {
         console.error('Failed to load default gallery:', e);

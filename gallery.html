@@ -501,9 +501,12 @@
           return;
         }
 
-        grid.innerHTML = active.map(item => `
-          <div class="gallery-item-card" data-type="${item.mediaType}" data-url="${item.mediaUrl}" data-title="${item.title}" data-thumb="${item.thumbnail || ''}" style="break-inside: avoid; margin-bottom: 24px; border-radius: var(--radius-sm); overflow: hidden; position: relative; cursor: pointer; box-shadow: var(--shadow-subtle); border: 1px solid var(--color-cream-border); background: #fff;">
-            <img src="${item.thumbnail || item.mediaUrl}" alt="${item.title}" loading="lazy" style="width: 100%; display: block; object-fit: cover; transition: transform 0.5s ease;">
+        grid.innerHTML = active.map(item => {
+          const mediaUrl = item.mediaUrl || item.src || '';
+          const thumbUrl = item.thumbnail || item.thumb || mediaUrl;
+          return `
+          <div class="gallery-item-card" data-type="${item.mediaType}" data-url="${mediaUrl}" data-title="${item.title}" data-thumb="${thumbUrl}" style="break-inside: avoid; margin-bottom: 24px; border-radius: var(--radius-sm); overflow: hidden; position: relative; cursor: pointer; box-shadow: var(--shadow-subtle); border: 1px solid var(--color-cream-border); background: #fff;">
+            <img src="${thumbUrl}" alt="${item.title}" loading="lazy" style="width: 100%; display: block; object-fit: cover; transition: transform 0.5s ease;" onerror="this.src='assets/brand/logo_badge_square.png'">
             
             ${item.mediaType === 'reel' ? `
               <div style="position: absolute; top: 12px; right: 12px; background: var(--color-wine-muted); color: var(--color-gold-light); font-size: 0.7rem; font-weight: 700; padding: 3px 8px; border-radius: var(--radius-pill); display: flex; align-items: center; gap: 4px;">
@@ -523,7 +526,8 @@
               </h4>
             </div>
           </div>
-        `).join('');
+        `;
+        }).join('');
 
         // Attach click triggers
         grid.querySelectorAll('.gallery-item-card').forEach(card => {
