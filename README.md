@@ -12,7 +12,7 @@ Official premium website for **DEEPKRISHNA ZAVERI**, showcasing handcrafted brid
 - **Current Showroom**: Established 2026
 - **Owner**: Jay Soni
 - **Showroom Address**: 7, Synergy Space, Near D-Mart, Sargasan, Gandhinagar, Gujarat 382010
-- **Confirmed Public Phone**: [+91 97555 9249](tel:+91975559249)
+- **Confirmed Public Phone**: [+91 97555 59249](tel:+919755559249)
 - **Email**: [Deepkrishnazaveri@gmail.com](mailto:Deepkrishnazaveri@gmail.com)
 - **Instagram**: [@deepkrishnazaveri](https://www.instagram.com/deepkrishnazaveri/)
 - **Showroom Hours**: 10:00 AM – 10:00 PM (Monday – Sunday)

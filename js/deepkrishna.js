@@ -304,12 +304,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 4500);
   }
 
-  // 9. Forms handler
-  document.querySelectorAll('form').forEach(form => {
+  // 9. Generic Forms handler (skip public-enquiry-form which has dedicated handler)
+  document.querySelectorAll('form:not(#public-enquiry-form)').forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       showToast('Thank you for contacting Deepkrishna Zaveri. Our showroom team will connect with you shortly.');
       form.reset();
+    });
+  });
+
+  // 10. Universal Enquire Now scroll handler when on contact page
+  document.querySelectorAll('a[href*="contact.html"], a[href="#public-enquiry-form"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const isContactPage = window.location.pathname.endsWith('contact.html') || window.location.pathname.endsWith('/contact') || window.location.pathname.endsWith('/contact/');
+      if (isContactPage) {
+        const form = document.getElementById('public-enquiry-form') || document.querySelector('form');
+        if (form) {
+          e.preventDefault();
+          form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          const nameInput = document.getElementById('contact-name');
+          if (nameInput) setTimeout(() => nameInput.focus(), 400);
+        }
+      }
     });
   });
 });
