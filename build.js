@@ -29,7 +29,7 @@ function copyRecursive(src, dest) {
 // 1. Copy top-level HTML files
 const rootFiles = fs.readdirSync(rootDir);
 for (const file of rootFiles) {
-  if (file.endsWith('.html') || file === '_headers' || file === '_redirects' || file === 'logo.png') {
+  if (file.endsWith('.html') || file === '_headers' || file === 'logo.png') {
     fs.copyFileSync(path.join(rootDir, file), path.join(distDir, file));
     console.log(`Copied ${file}`);
   }
